@@ -69,7 +69,7 @@ def test_valid_format_email():
     # Assert
     driver: webdriver = configure_selenium()
     element_search_field = driver.find_element(By.ID, "email")
-    element_search_field.send_keys("teste@exemplo.com")
+    element_search_field.send_keys("test@example.com")
     element_password_field = driver.find_element(By.ID, "password")
     element_password_field.send_keys("123456789")
     element_button_submit_search = driver.find_element(By.ID, "signin")
@@ -79,4 +79,4 @@ def test_valid_format_email():
 
     # Assert
     element_message_feedback = driver.find_element(By.ID, "messageFeedback").text
-    assert element_message_feedback == "Username or password invalid! :("
+    assert element_message_feedback == "Username and password correct, you will be redirect to adminsitrador page wait..."
